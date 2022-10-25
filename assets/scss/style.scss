@@ -68,6 +68,11 @@ a {
     font-size: 2rem;
     line-height: 2.3rem;
     font-family: "Work Sans";
+    transition: 1s;
+}
+a:hover {
+    background-color: $c1;
+    color: $c2;
 }
 body {
     header {
@@ -281,7 +286,9 @@ body {
                     transform: rotate(45deg);
                     @include p-big();
 
-                    top: calc(5vw + 50px);
+                    top: -10vw;
+                    right: -400px;
+
                     animation-name: text-scroll;
                     animation-duration: 10s;
                     animation-timing-function: linear;
@@ -340,8 +347,9 @@ body {
     }
 }
 
-// @media screen and (max-width: 768px) {
-//     body {
-//         background-color: red;
-//     }
-// }
+@media screen and (max-width: 768px) {
+    @mixin p-big {
+        font-size: 1rem;
+        line-height: 7rem;
+    }
+}
